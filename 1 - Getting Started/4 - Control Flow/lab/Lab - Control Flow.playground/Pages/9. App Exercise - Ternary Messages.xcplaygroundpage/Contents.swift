@@ -8,11 +8,8 @@
 let stepGoal = 10000
 let steps = 3948
 
-if steps < stepGoal / 2 {
-    print("Almost halfway!")
-} else {
-    print("Over halfway!")
-}
+
+print(steps < stepGoal ? "You're almost halfway there!" : "You're over halfway there!")
 
 
 /*:
