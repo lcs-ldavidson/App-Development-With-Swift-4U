@@ -7,13 +7,29 @@
 
  As an example, write a function that only does a portion of what your previous `pacing` function did. This function will be called `calculatePace`. It should take three `Double` arguments called `currentDistance`, `totalDistance`, and `currentTime`, and should return a `Double` that will represent the time at which the user will finish the run based on the user's current distance and time. call the function and print the return value.
  */
+func calculatePace(currentDistance: Double, totalDistance: Double, currentTime: Double) -> Double {
+    let percentDone = totalDistance / currentDistance
+    let endTime = currentTime * percentDone
+    return endTime
+}
 
-
+print(calculatePace(currentDistance: 3.65, totalDistance: 20, currentTime: 8))
 /*:
  Now write a function called `pacing` that takes four `Double` arguments called `currentDistance`, `totalDistance`, `currentTime`, and `goalTime`. The function should also return a `String`, which will be the message to show the user. The function should call `calculatePace`, passing in the appropriate values, and capture the return value. The function should then compare the returned value to `goalTime` and if the user is on pace return "Keep it up!", and return "You've got to push it just a bit harder!" otherwise. Call the function and print the return value.
  */
+func pacing(currentDistance: Double, totalDistance: Double, currentTime: Double, goaltime: Double) -> String {
+    let expectedEndTime = calculatePace(currentDistance: currentDistance, totalDistance: totalDistance, currentTime: currentTime)
+    if expectedEndTime < goaltime {
+        let result = "Keep it Up!"
+        return result
+    } else {
+        let result = "You've got to push it just a bit harder!"
+        return result
+    }
+}
 
-
+let progressReport = pacing(currentDistance: 11.5, totalDistance: 20, currentTime: 112, goaltime: 200)
+print(progressReport)
 /*:
 
  _Copyright © 2018 Apple Inc._
