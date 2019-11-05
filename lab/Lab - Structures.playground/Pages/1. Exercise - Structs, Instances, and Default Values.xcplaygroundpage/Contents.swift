@@ -41,4 +41,5 @@ struct Book {
 var favouriteBook = Book(title: "The Legend of Drizzt", author: "R.A. Salvatore", pages: 1002, price: 19.99)
 
 print(favouriteBook.pages)
+print("My favourite book, \(favouriteBook.title) by \(favouriteBook.author), has \(favouriteBook.pages) pages.")
 //: page 1 of 10  |  [Next: App Exercise - Workout Tracking](@next)
