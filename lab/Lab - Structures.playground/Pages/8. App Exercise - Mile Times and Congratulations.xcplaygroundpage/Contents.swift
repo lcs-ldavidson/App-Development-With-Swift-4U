@@ -11,7 +11,14 @@ struct RunningWorkout {
     var distance: Double
     var time: Double
     var elevation: Double
+    var averageMileTime: Double {
+        return time / (distance / 1600)
+    }
 }
+
+var myRun = RunningWorkout(distance: 2047, time: 16, elevation: 12)
+
+print(myRun.averageMileTime)
 /*:
  In other app exercises, you've provided encouraging messages to the user based on how many steps they've completed. A great place to check whether or not you should display something to the user is in a property observer.
  

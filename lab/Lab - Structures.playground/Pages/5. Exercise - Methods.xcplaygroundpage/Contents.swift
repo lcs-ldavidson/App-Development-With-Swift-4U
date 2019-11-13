@@ -23,10 +23,10 @@ struct Post {
     var message: String
     var likes: Int = 0 {
         willSet {
-            print("This post will have \(newValue) likes.")
+            print("This post now has \(newValue) likes.")
         }
         didSet {
-            print("Now this post did have \(oldValue) likes.")
+            print("This post did have \(oldValue) likes.")
         }
     }
     var numberOfComments: Int
