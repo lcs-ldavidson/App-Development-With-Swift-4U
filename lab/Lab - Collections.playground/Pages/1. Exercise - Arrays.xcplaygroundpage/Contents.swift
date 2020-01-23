@@ -21,10 +21,11 @@ print(resistrationList)
  Someone had a conflict and decided to transfer her registration to someone else. Use array subscripting to change the sixth element to `Rebecca`. Print the contents of the collection.
  */
 //resistrationList[5] = "Rebecca"
-//print(resistrationList)
+print(resistrationList)
 /*:
  Call `removeLast()` on `registrationList`. If done correctly, this should remove `Rebecca` from the collection. Store the result of `removeLast()` into a new constant `deletedItem`, then print `deletedItem`.
  */
 var deletedItem = resistrationList.removeLast()
 print(deletedItem)
+
 //: page 1 of 4  |  [Next: App Exercise - Activity Challenge](@next)
