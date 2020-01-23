@@ -15,6 +15,7 @@ struct GPS {
 var somePlace = GPS()
 
 print(somePlace.longitude)
+print(somePlace.latitude)
 
 /*:
  Change `somePlace`'s latitude to 51.514004, and the longitude to 0.125226, then print the updated values.

@@ -30,6 +30,8 @@ class Spaceship {
     }
 }
 
+
+
 class Fighter: Spaceship {
     var weapon: String = ""
     var remainingFirePower: Int = 5
@@ -48,6 +50,8 @@ class Fighter: Spaceship {
         super.init(name: name, health: health, position: position)
     }
 }
+
+
 
 class ShieldedShip: Fighter {
     var shieldStrength: Int = 25
@@ -85,7 +89,6 @@ var destroyer = Fighter(weapon: "Laser", remainingFirePower: 10, name: "Destroye
  Then create an instance of `ShieldedShip` below called `defender`. Use the memberwise initializer you just created. The ship's name should be "Defender."
  */
 var defender = ShieldedShip(shieldStrength: 25, weapon: "Cannon", remainingFirePower: 5, name: "Defender", health: 100, position: 0)
-
 /*:
  Create a new instance of `Spaceship` called `sameShip` and set it equal to `falcon`. Print out the position of `sameShip` and `falcon`, then call `moveLeft()` on `sameShip` and print out the position of `sameShip` and `falcon` again. Did both positions change? Why? If both were structs instead of classes, would it be the same? Why or why not? Provide your answer in a comment or print statement below.
  */
@@ -98,6 +101,8 @@ print(sameship.position)
 print(falcon.position)
 
 print("Classes that share variables update all variables when it is mutated. Structures' variables operate independntly of each other.")
+
+
 
 /*:
 
